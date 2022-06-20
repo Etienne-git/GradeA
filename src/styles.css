@@ -1,1 +1,203 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Bahnschrift, serif;
+  color: #616161;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+.container{
+  display: flex;
+  height: 100%;
+  width: 100%
+}
+
+.item{
+  display: flex;
+  width: 100%
+}
+router-outlet + *  {
+  padding: 0 16px;
+}
+
+/* Text */
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h1, h2 {
+  font-weight: lighter;
+}
+
+p {
+  font-size: 14px;
+}
+
+/* Hyperlink */
+
+a {
+  cursor: pointer;
+  color: #d0d4dc;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin-right: 2.8rem;
+}
+
+input {
+  height: 1.75rem;
+  width: 12rem;
+  border-radius: 0.4rem;
+  text-align: center;
+}
+
+::placeholder{
+  color: #476098;
+  opacity: 1.0;
+}
+
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+  text-transform: uppercase;
+}
+
+/* Button */
+.button, button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 0.4rem;
+  font-size: 14px;
+  cursor: pointer;
+  color: #d0d4dc;
+  border: none;
+}
+
+.button:hover, button:hover {
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.button:disabled, button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+
+.fancy-button {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.2rem;
+  color: #d0d4dc;
+}
+
+.form-inline{
+  display: flex;
+}
+.form-group{
+  display: flex;
+}
+
+.material-icons {
+  color: #476098;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  background: rgba(175, 201, 200, 0.5);
+  width: 100%;
+}
+
+.navbar-nav{
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+
+.navbar-brand{
+  font-size: 3rem;
+
+}
+.nav-item{
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: #476098;
+}
+
+.nav-item:hover{
+  font-size: 1.75rem;
+}
+
+.gradient-text {
+  font-size: 3rem;
+  background-color: #CA4246;
+
+  /* Create the gradient. */
+  background-image: linear-gradient(
+    45deg,
+    #CA4246 16.666%,
+    #E16541 16.666%,
+    #E16541 33.333%,
+    #F18F43 33.333%,
+    #F18F43 50%,
+    #8B9862 50%,
+    #8B9862 66.666%,
+    #476098 66.666%,
+    #7fad48 83.333%,
+    #63be3e 83.333%);
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animate the text when loading the element. */
+  /* This animates it on page load and when hovering out. */
+  animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+}
+
+.gradient-text:hover{
+  animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+@keyframes rainbow-text-simple-animation-rev {
+  0% {
+    background-size: 650%;
+  }
+  40% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@keyframes rainbow-text-simple-animation {
+  0% {
+    background-size: 100%;
+  }
+  80% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 650%;
+  }
+}

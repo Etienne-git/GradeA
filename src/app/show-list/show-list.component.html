@@ -1,0 +1,13 @@
+<div id="movielist">
+  <h2>Shows</h2>
+  <div *ngFor="let show of shows">
+    <a [title]="show.name + ' details'" [routerLink]="['/media', show.type, show.id]">
+      <img src=".\assets\images\{{show.image}}" alt="image_{{show.name}}" width="200" height="300">
+      <h3>
+        {{show.name}}
+      </h3>
+    </a>
+    <p>description: "{{show.description}}"</p>
+    <p>IMDb: {{show.rating}}</p>
+  </div>
+</div>

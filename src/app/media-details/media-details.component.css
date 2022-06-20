@@ -1,0 +1,9 @@
+#grades-form{
+  display: flex;
+  flex-direction: row;
+
+}
+
+#plus-symbol{
+  margin: 0 auto;
+}
