@@ -44,10 +44,10 @@ export class MediaDetailsComponent implements OnInit {
     this.uncheckGrades(clickedGrade);
 
     if(plusClicked && currentPlusFill != clickedGrade.fill) {
-      (document.getElementById(clickedGrade.grade + plus.pathId) as HTMLImageElement).style.fill = clickedGrade.fill;
-      (document.getElementById(clickedGrade.pathId) as HTMLImageElement).style.fill = clickedGrade.fill;
+      (document.getElementById(clickedGrade.grade + plus.pathId) as HTMLImageElement).style.fill = clickedGrade.fillPlus;
+      (document.getElementById(clickedGrade.pathId) as HTMLImageElement).style.fill = clickedGrade.fillPlus;
     }
-    else if(!plusClicked && currentGradeFill != clickedGrade.fill)
+    else if(!plusClicked && currentGradeFill != clickedGrade.fill && currentGradeFill != clickedGrade.fillPlus)
       (document.getElementById(clickedGrade.pathId) as HTMLImageElement).style.fill = clickedGrade.fill;
     else {
       if(!plusClicked)
