@@ -1,6 +1,6 @@
 * {
   font-family: Bahnschrift, serif;
-  color: #616161;
+  color: #334133;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,10 +11,15 @@ body {
 
 .container{
   display: flex;
+  justify-content: center;
   height: 100%;
   width: 100%
 }
 
+.row{
+  display: flex;
+  flex-direction: row;
+}
 .item{
   display: flex;
   width: 100%
@@ -30,12 +35,10 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 32px;
+  margin : 0.4rem;
 }
 
-h1, h2 {
-  font-weight: lighter;
-}
 
 p {
   font-size: 14px;
@@ -45,7 +48,7 @@ p {
 
 a {
   cursor: pointer;
-  color: #d0d4dc;
+  color: rgb(236, 246, 243);
   text-decoration: none;
 }
 
@@ -62,7 +65,7 @@ input {
 }
 
 ::placeholder{
-  color: #476098;
+  color: #414b46;
   opacity: 1.0;
 }
 
@@ -83,8 +86,12 @@ label {
   border-radius: 0.4rem;
   font-size: 14px;
   cursor: pointer;
-  color: #d0d4dc;
+  color: #414b46;
   border: none;
+}
+
+.btn-outline-success{
+  background-color : #414b46
 }
 
 .button:hover, button:hover {
@@ -102,7 +109,7 @@ label {
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 0.2rem;
-  color: #d0d4dc;
+  color: rgb(236, 246, 243);
 }
 
 .form-inline{
@@ -110,22 +117,21 @@ label {
 }
 .form-group{
   display: flex;
-}
-
-.material-icons {
-  color: #476098;
+  align-items: center;
 }
 
 .navbar{
   display: flex;
   flex-direction: row;
-  background: rgba(175, 201, 200, 0.5);
+  background: rgb(236, 246, 243);
   width: 100%;
 }
 
 .navbar-nav{
+  display: flex;
   margin-right: 2rem;
   margin-left: 1rem;
+  align-items: center;
 }
 
 .navbar-brand{
@@ -135,7 +141,7 @@ label {
 .nav-item{
   margin-right: 1rem;
   font-size: 1.5rem;
-  color: #476098;
+  color: #414b46;
 }
 
 .nav-item:hover{
@@ -143,7 +149,7 @@ label {
 }
 
 .gradient-text {
-  font-size: 3rem;
+  font-size: 3.5rem;
   background-color: #CA4246;
 
   /* Create the gradient. */

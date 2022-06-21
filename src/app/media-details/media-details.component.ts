@@ -41,26 +41,29 @@ export class MediaDetailsComponent implements OnInit {
     let currentGradeFill : string = (document.getElementById(clickedGrade.pathId) as HTMLImageElement).style.fill;
     let currentPlusFill : string = (document.getElementById(clickedGrade.grade + plus.pathId) as HTMLImageElement).style.fill;
 
-    this.uncheckGrades(clickedGrade);
+    this.uncheckOtherGrades(clickedGrade);
 
-    if(plusClicked && currentPlusFill != clickedGrade.fill) {
+    if(plusClicked && currentPlusFill != clickedGrade.fillPlus) { //color both grade and plus if plus is clicked and not colored so far
       (document.getElementById(clickedGrade.grade + plus.pathId) as HTMLImageElement).style.fill = clickedGrade.fillPlus;
       (document.getElementById(clickedGrade.pathId) as HTMLImageElement).style.fill = clickedGrade.fillPlus;
     }
-    else if(!plusClicked && currentGradeFill != clickedGrade.fill && currentGradeFill != clickedGrade.fillPlus)
+    else if(!plusClicked && currentGradeFill != clickedGrade.fill && currentGradeFill != clickedGrade.fillPlus) //grade is clicked and not colored so far
       (document.getElementById(clickedGrade.pathId) as HTMLImageElement).style.fill = clickedGrade.fill;
-    else {
-      if(!plusClicked)
-        (document.getElementById(clickedGrade.pathId) as HTMLImageElement).style.fill = '#DDECEB';
-      (document.getElementById(clickedGrade.grade + plus.pathId) as HTMLImageElement).style.fill = '#DDECEB';
-    }
+    else if(!plusClicked) { //uncheck grade and plus if grade is clicked and not colored
+        (document.getElementById(clickedGrade.pathId) as HTMLImageElement).style.fill = 'rgb(236, 246, 243)';
+        (document.getElementById(clickedGrade.grade + plus.pathId) as HTMLImageElement).style.fill = 'rgb(236, 246, 243)';
+      }
+    else { //otherwise only uncheck plus and set grade to nonplus color
+      (document.getElementById(clickedGrade.grade + plus.pathId) as HTMLImageElement).style.fill = 'rgb(236, 246, 243)';
+      (document.getElementById(clickedGrade.pathId) as HTMLImageElement).style.fill = clickedGrade.fill;
+      }
   }
 
-  private uncheckGrades(clickedGrade: Grade) {
+  private uncheckOtherGrades(clickedGrade: Grade) {
     grades.forEach(grade => {
       if (grade.pathId != clickedGrade.pathId) {
-        (document.getElementById(grade.pathId) as HTMLImageElement).style.fill = '#DDECEB';
-        (document.getElementById(grade.grade + plus.pathId) as HTMLImageElement).style.fill = '#DDECEB';
+        (document.getElementById(grade.pathId) as HTMLImageElement).style.fill = 'rgb(236, 246, 243)';
+        (document.getElementById(grade.grade + plus.pathId) as HTMLImageElement).style.fill = 'rgb(236, 246, 243)';
       }
     })
   }

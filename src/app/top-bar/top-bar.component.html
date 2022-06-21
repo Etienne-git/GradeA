@@ -16,7 +16,8 @@
         <form class="form-inline">
           <input class="form-control mr-sm-2" id="search_input" name="preview" type="search" placeholder="Search" autocomplete="off" aria-describedby="search-text"
                  [(ngModel)]="searchInput">
-          <button class="btn btn-outline-success my-2 my-sm-0" id="search_button" type="submit" (click)="callSearchRequest()" ><i class="material-icons">search</i></button>
+          <button class="btn btn-outline-success my-2 my-sm-0" id="search_button" type="submit" (click)="callSearchRequest()" >
+            <i class="material-icons" id="search_icon" >search</i></button>
         </form>
         <ul id="search_filter">
           <li *ngFor="let m of media | appFilter: searchInput" id="preview_list" (click)="previewClick(m.name)"  value="{{m.name}}"

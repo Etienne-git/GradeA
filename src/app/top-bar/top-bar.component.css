@@ -9,6 +9,7 @@
 }
 #profile_icon{
   font-size:2.5rem;
+  color : #39495b;
 }
 
 #search_bar{
@@ -23,6 +24,7 @@
 
 #search_button{
   height: 1.75rem;
+  color : rgb(236, 246, 243);
 }
 
 #search_filter{
@@ -31,4 +33,8 @@
   width: 12rem;
   margin-right: 5.3rem;
   text-align: center;
+}
+
+#search_icon{
+  color : rgb(236, 246, 243);
 }
