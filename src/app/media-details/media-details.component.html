@@ -1,5 +1,5 @@
 <div class="container">
-  <div *ngIf="media">
+  <div *ngIf="media" id="media-details">
     <div class="row" id="title-image-grades">
       <div class="col" id="image-grades">
         <h2>{{media.name}}</h2>
@@ -19,6 +19,9 @@
             </svg>
           </div>
       </div>
+    </div>
+    <div class="row" id="description">
+      <p>{{media.description}}</p>
     </div>
   </div>
 </div>

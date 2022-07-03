@@ -20,8 +20,7 @@
             <i class="material-icons" id="search_icon" >search</i></button>
         </form>
         <ul id="search_filter">
-          <li *ngFor="let m of media | appFilter: searchInput" id="preview_list" (click)="previewClick(m.name)"  value="{{m.name}}"
-              appHighlight [searchedWord]="searchInput" [content]="m.name" [classToApply]="'font-weight-bold'" [setTitle]="true">
+          <li *ngFor="let m of media | appFilter: searchInput" id="preview_list" (click)="previewClick(m.name)"  value="{{m.name}}" >
             {{m.name}}
           </li>
         </ul>
@@ -32,3 +31,4 @@
     </div>
   </nav>
 </div>
+

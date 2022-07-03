@@ -10,6 +10,6 @@ export class CommonService {
   }
 
   getUpdate(): Observable<any> { //the receiver component calls this function
-    return this.subjectName.asObservable(); //it returns as an observable to which the receiver funtion will subscribe
+    return this.subjectName.asObservable(); //it returns as an observable to which the receiver function will subscribe
   }
 }

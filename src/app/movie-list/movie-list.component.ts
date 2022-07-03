@@ -9,13 +9,15 @@ import { FilterPipe } from "../pipes/filter.pipe";
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.css'],
-  providers: [FilterPipe]
+  providers: [FilterPipe],
+  animations: []
 })
 
 export class MovieListComponent {
   movies : Media[] = movies;
   searchInput : string = '';
   private subscriptionMovie: Subscription;
+  show : boolean = true;
 
   constructor(private Service: CommonService, private pipe : FilterPipe) {
 

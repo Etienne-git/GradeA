@@ -1,1 +1,6 @@
-
+#gamelist{
+  display: flex;
+  flex-direction: column;
+  width: 113rem;
+  align-items: center;
+}

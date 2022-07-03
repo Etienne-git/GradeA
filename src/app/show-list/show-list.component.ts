@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  trigger,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 import { shows } from '../media';
 import { CommonService } from '../services/common-service';
@@ -10,7 +16,18 @@ import {Subscription} from "rxjs";
   selector: 'app-show-list',
   templateUrl: './show-list.component.html',
   styleUrls: ['./show-list.component.css'],
-  providers: [FilterPipe]
+  providers: [FilterPipe],
+  animations: [
+    trigger('parent', [
+      transition(':enter', animate(0))
+    ]),
+    trigger('child', [
+      transition(':enter', [
+        style({width: 0}),
+        animate(250, style({width: '*'})),
+      ]),
+    ])
+  ]
 })
 export class ShowListComponent implements OnInit {
 shows = shows;

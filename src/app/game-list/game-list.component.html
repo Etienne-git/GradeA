@@ -1,11 +1,21 @@
-<h2>Games</h2>
-<div *ngFor="let game of games">
-  <a [title]="game.name + ' details'" [routerLink]="['/media', game.type, game.id]">
-  <img src=".\assets\images\{{game.image}}" alt="image_{{game.name}}" width="200" height="300">
-  <h3>
-    {{game.name}}
-  </h3>
-  </a>
-  <p>description: "{{game.description}}"</p>
-  <p>IMDb: {{game.rating}}</p>
+<div class="container-fluid" id="gamelist">
+  <h2>Games</h2>
+  <div class="row" *ngFor="let game of games">
+      <a [title]="game.name + ' details'" [routerLink]="['/media', game.type, game.id]">
+      <div class="col">
+        <img src=".\assets\images\{{game.image}}" alt="image_{{game.name}}" width="200" height="300">
+      </div>
+      <div class ="col">
+        <h3>
+          {{game.name}}
+        </h3>
+      </div>
+      </a>
+    <div class="col">
+      <p>description: "{{game.description}}"</p>
+    </div>
+    <div class="col">
+      <p>IMDb: {{game.rating}}</p>
+    </div>
+  </div>
 </div>

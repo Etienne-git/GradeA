@@ -5,20 +5,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  margin: 0;
-}
 
 .container{
   display: flex;
-  justify-content: center;
   height: 100%;
-  width: 100%
+  width: 100%;
 }
 
 .row{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+}
+.col{
+  display: flex;
+  justify-content: center;
 }
 .item{
   display: flex;
@@ -149,7 +150,7 @@ label {
 }
 
 .gradient-text {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   background-color: #CA4246;
 
   /* Create the gradient. */
@@ -207,3 +208,4 @@ label {
     background-size: 650%;
   }
 }
+

@@ -9,7 +9,8 @@ import {Subscription} from "rxjs";
   selector: 'app-game-list',
   templateUrl: './game-list.component.html',
   styleUrls: ['./game-list.component.css'],
-  providers: [FilterPipe]
+  providers: [FilterPipe],
+  animations: []
 })
 
 export class GameListComponent {
