@@ -1,8 +1,11 @@
+
+:host{
+  display: block;
+  width: 100%;
+}
 #movielist{
   display: flex;
   flex-direction: column;
-  width: 113rem;
-  align-items: center;
 }
 
 
